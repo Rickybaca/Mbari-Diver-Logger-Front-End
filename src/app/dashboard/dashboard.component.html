@@ -1,0 +1,76 @@
+
+
+<section>
+
+<router-outlet></router-outlet>
+</section>
+
+<div class="container">
+    <app-nav></app-nav>
+
+    <h1 class="display-4">Dashboard</h1>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <form>
+            <a routerLink="/log-dive"><button type="button" id="logDive" class="btn btn-block btn-success">Log Dive</button></a>
+            <br>
+            <a routerLink="/add-diver"><button type="button" id="addDiver" class="btn btn-block btn-success">Add Diver</button></a>
+            <br>
+            <a routerLink="/log-training"><button type="button" id="logTraining" class="btn btn-block btn-success">Log Training</button></a>
+        </form>
+        <br>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <form>
+            <a routerLink="/add-inventory"><button type="button" id="addDiver" class="btn btn-block btn-success">Add Inventory</button></a>
+            <br>
+            <a routerLink="/add-equipment"><button type="button" id="addDiver" class="btn btn-block btn-success">Add Equipment</button></a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!--<app-nav></app-nav>
+
+<section>
+
+<router-outlet></router-outlet>
+</section>
+
+<br/>
+<body>
+  <main class="d-flex align-items-center justify-content-center">
+      <div class="card flex-grow-1 flex-md-grow-0">
+          <div class="card-body p-4">
+              <h1>Dashboard</h1>
+              <form>
+                <a routerLink="/log-dive"><button type="button" id="logDive" class="btn btn-block btn-success">Log Dive</button></a>
+                  <br>
+                  <a routerLink="/add-diver"><button type="button" id="addDiver" class="btn btn-block btn-success">Add Diver</button></a>
+              </form>
+          </div>
+
+      </div>
+  </main>
+
+</body>
+
+
+
+
+<!-- <body>
+  <main class="d-flex align-items-center justify-content-center">
+<div class="jumbotron">
+  <h1>Dashboard</h1>
+</div>
+
+<div class="card-body p-4">
+<button type="button" id="logDive" class="btn btn-block btn-success"><a routerLink="/dashboard">Log Dive</a></button>
+<button type="button" id="addDiver" class="btn btn-block btn-success"><a routerLink="/dashboard">Add Diver</a></button>
+</div>
+
+</main>
+
+</body> -->

@@ -1,0 +1,168 @@
+
+<section>
+
+<router-outlet></router-outlet>
+</section>
+
+<div class="container">
+    <app-nav></app-nav>
+
+    <h1 class="display-4">Dive Log</h1>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+          <h2>Dive log history</h2>
+
+          <table class="table">
+            <tr>
+              <td>Location</td>
+              <td>Datße</td>
+              <td>Start Time</td>
+              <td>End Time</td>
+            </tr>
+            <tr *ngFor="let log of log$">
+                <td>{{log.specificSite}}</td>
+              <td>{{log.diveDate}}</td>
+              <td>{{log.startTime}}</td>
+              <td>{{log.endTime}}</td>
+            </tr>
+          </table>
+
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h2>New Dive log</h2>
+
+        <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
+          <div class="form-group">
+            <label for="dive-date">* Dive Date:</label>
+            <input type="date" class="form-control" id="dive-date" name="diveDate" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="start-time">* Start Time:</label>
+            <input type="time" class="form-control" id="start-time" name="startTime" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="end-time">* End Time:</label>
+            <input type="time" class="form-control" id="end-time" name="endTime" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="bottom-minutes">* Bottom minutes:</label>
+            <input type="text" class="form-control" id="bottom-minutes" name="bottomMinutes" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="task">* Purpose/Task:</label>
+            <select class="form-control" id="task" name="purpose" ngModel>
+              <option>Nothing selected</option>
+              <option>Commercial Task</option>
+              <option>Commercial, Scientific Task</option>
+              <option>Other Task</option>
+              <option>Public Safety Task</option>
+              <option>Recreational Task</option>
+              <option>Scientific Task</option>
+              <option>Scientific, Recreational Task</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="purpose">Was this a training or proficiency dive?</label>
+            <select class="form-control" id="purpose" name="trainingProficiency" ngModel>
+              <option>No</option>
+              <option>Training</option>
+              <option>Proficiency</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="interval">Surface interval:</label>
+            <input type="text" class="form-control" id="interval" name="surfaceInterval" placeholder="hh:mm" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="site">* Select specific site:</label>
+            <select class="form-control" id="site"  name="specificSite" ngModel>
+              <option>** Not Listed/Other **</option>
+              <option>Exihibit 1</option>
+              <option>Field Location 1</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="otherSite">* Not Liste/Other site:</label>
+            <input type="text" class="form-control" id="otherSite" name="otherSite" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="gps">* Site GPS:</label>
+            <input type="text" class="form-control" id="gps" name="siteGPS" placeholder="pinpoint specific site location" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="max-dive">* Max dive (ft):</label>
+            <input type="text" class="form-control" id="max-dive" name="maxDive" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="mode">* Diving mode:</label>
+            <select class="form-control" id="mode" name="divingMode" ngModel>
+              <option>Scuba with FFM</option>
+              <option>Hookah</option>
+              <option>Snorkling</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="decompression">* Decompression:</label>
+            <select class="form-control" id="decompression" name="decompression" ngModel>
+              <option>Dive Computer</option>
+              <option>Dive Tables</option>
+              <option>Software</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gas">* Breathing gas:</label>
+            <select class="form-control" id="gas" name="breathingGas" ngModel>
+              <option>Air</option>
+              <option>Nitrox 28</option>
+              <option>Trimix 30/30</option>
+              <option>tes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="environment">Specialized environment:</label>
+            <select class="form-control" id="environment" name="environment" ngModel>
+              <option>Nothing selected</option>
+              <option>Overhead environment</option>
+              <option>Blue Water</option>
+              <option>Required Decompression</option>
+              <option>Aquarium Diving</option>
+              <option>asd</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="surface-condition">Surface condition:</label>
+            <select class="form-control" id="surface-conditino" name="surfaceCondition" ngModel>
+              <option>Calm</option>
+              <option>Moderate</option>
+              <option>Rough</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="underwater-condition">Underwater condition:</label>
+            <select class="form-control" id="underwater-conditino" name="waterCondition" ngModel>
+              <option>Good</option>
+              <option>Moderate</option>
+              <option>Poor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea class="form-control" id="comments" rows="2" name="comments" ngModel></textarea>
+          </div>
+          <div class="form-group">
+            <label for="animal-observation">Animal observations:</label>
+            <textarea class="form-control" id="animal-observation" rows="2" name="animalObservation" ngModel></textarea>
+          </div>
+          <div class="form-group">
+            * - required fields
+            <br>
+
+            <button type="submit" class="btn btn-primary">Save Log</button>
+            <a routerLink="/dashboard"><button type="button" class="btn btn-secondary">Cancel</button></a>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

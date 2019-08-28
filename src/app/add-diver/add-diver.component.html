@@ -1,0 +1,69 @@
+
+
+<section>
+
+<router-outlet></router-outlet>
+</section>
+
+
+
+<div class="container">
+    <app-nav></app-nav>
+
+    <h1 class="display-4">Add Diver</h1>
+    <br>
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+
+        <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
+          <div class="form-group">
+            <label for="first-name">* First Name:</label>
+            <input type="text" class="form-control" id="first-name" name="firstName" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="last-name">* Last name:</label>
+            <input type="text" class="form-control" id="last-name" name="lastName" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="email">* Email:</label>
+            <input type="text" class="form-control" id="email" name="email" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" class="form-control" id="birthdate" name="birthDate" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="text" class="form-control" id="birthdate" name="mobile" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="Alternate">Altername mobile:</label>
+            <input type="text" class="form-control" id="alternativeMobile" name="alternativeMobile" ngModel>
+          </div>
+          <div class="form-group">
+            <label for="other">Other:</label>
+            <input type="text" class="form-control" id="other" name="other" ngModel>
+          </div>
+          <div>
+
+            <a ><button type="submit" class="btn btn-primary">Submit</button></a>
+            <a routerLink="/dashboard"><button type="button" class="btn btn-secondary">Cancel</button></a>
+          </div>
+        </form>
+      </div>
+      <div class="col-12 col-md-8">
+
+          <div class="">
+            <h3>Current Divers</h3>
+              <ul >
+                <li *ngFor="let diver of divers$">
+                  {{diver.firstName}} {{diver.lastName}}
+                </li>
+              </ul>
+          </div>
+
+      </div>
+    </div>
+</div>
+
