@@ -9,7 +9,6 @@ This project is for the Monterey Bay Aquarium Research Institute (Mbari) where w
 <li>Once an admin enters a correct username and password they could then procced to look at any diver with their diving logs.</li></br>
 <li>At any time an admin can add/delete logs to a specific diver or add/delete a diver. </li></br>
 <li>Once an admin logs out they can no longer acess any iformation and will be taken back to the login page.</li></br>
-<
 </ul>
 
 <b>functionality </b>
