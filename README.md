@@ -1,5 +1,5 @@
 # Mbari-Diver-Logger-Front-End
-
+<b>functionality </b>
 ![Mbari-Diver-Logger](https://user-images.githubusercontent.com/38442810/63825925-81c04800-c911-11e9-925e-44f37b00a86b.png)
 
 <b>Screenshots</b>
